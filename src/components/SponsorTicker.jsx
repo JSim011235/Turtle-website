@@ -81,7 +81,7 @@ const SponsorTicker = () => {
               display: "block",
             };
             if (logo.name === "14 & Elm") {
-              customImgStyle.maxHeight = 48;
+              customImgStyle.maxHeight = 60;
               customImgStyle.maxWidth = 140;
             }
             if (logo.name === "L3 Harris") {
