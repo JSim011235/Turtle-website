@@ -483,7 +483,7 @@ export const projects = [
     title: "MAZE",
     subtitle: "Autonomous Lidar Maze Robot",
     description:
-      "Fully autonomous robot that maps and navigates randomly generated mazes using Lidar and fast marching tree algorithms.",
+      "Fully autonomous robot that maps and navigates randomly generated mazes using Lidar.",
     category: "Autonomy",
     tags: ["Lidar", "Path Planning", "ROS2", "C++", "Kinematics", "Autonomy"],
     status: "Active",
@@ -496,7 +496,7 @@ export const projects = [
       "Develop kinematics and RPLidar software for movement",
     ],
     lookingFor: [
-      "C++ programming and algorithms",
+      "C++ and Python programming and algorithms",
       "ROS 2 development",
       "Controls, path planning, and kinematics",
       "Lidar, microcontrollers, and robotics hardware",
