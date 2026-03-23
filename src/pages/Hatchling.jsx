@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import ImageCarousel from "../components/ImageCarousel";
@@ -63,6 +62,147 @@ const Hatchling = () => {
     window.addEventListener("storage", handler);
     return () => window.removeEventListener("storage", handler);
   }, []);
+
+  const learningObjectiveGroups = [
+    {
+      groupName: "SolidWorks (CAD) Competency",
+      objecives: [
+        "ObjectDesign custom parts and modify assemblies",
+        "Design around manufacturing constraints",
+      ],
+    },
+    {
+      groupName: "Electronics",
+      objecives: [
+        "Evaluating hardware specifications and datasheets",
+        "Circuit design and implementation",
+      ],
+    },
+    {
+      groupName: "Programming",
+      objecives: [
+        "Utilize Git and GitHub",
+        "Control hardware via a microcontroller",
+        "Python and C++",
+      ],
+    },
+    {
+      groupName: "Manufacturing",
+      objecives: ["Soldering and crimping", "Additive manufacturing"],
+    },
+    {
+      groupName: "Problem Solving and Critical Thinking",
+      objecives: [
+        "Work in teams throughout a full design process from concept creation to testing",
+      ],
+    },
+    {
+      groupName: "Community & Passion",
+      objecives: [
+        "Build lasting connections with fellow engineers",
+        "Develop a passion for engineering through hands-on experience",
+      ],
+    },
+  ];
+
+  const programScheduleItems = [
+    {
+      heading: "Week 1",
+      subheading: "Introductions",
+      objectives: [
+        "Hatchling Overview",
+        "Meet the Director team and Peers",
+        "Install software",
+      ],
+    },
+    {
+      heading: "Week 2",
+      subheading: "SolidWorks (CAD) Foundation",
+      objectives: [
+        "What is Computer-Aided Design (CAD)?",
+        "Engineering Drawing Navigation",
+        "Navigating SolidWorks",
+        "Design Intent",
+      ],
+    },
+    {
+      heading: "Week 3",
+      subheading: "SolidWorks 3D",
+      objectives: [
+        "SolidWorks Big 3 Features: Extrude, Revolve, and Finishing operations",
+        "Origin Selection and Symmetry",
+        "Important Tools",
+      ],
+    },
+    {
+      heading: "Week 4",
+      subheading: "Tools, Project, and Process",
+      objectives: [
+        "Design Process",
+        "Additive Manufacturing: Best Practices",
+        "Tool Safety and Usage",
+        "Project Introduction",
+      ],
+      milestone: "Project Introduction",
+    },
+    {
+      heading: "Week 5",
+      subheading: "Design Review and C++",
+      objectives: [
+        "Syntax, Variables, Loops, If-else Statements, and Classes",
+        "Signal Processing",
+        "Design Review",
+      ],
+      milestone: "Design Review",
+    },
+    {
+      heading: "Week 6",
+      subheading: "SolidWorks Assembly",
+      objectives: [
+        "Mates",
+        "Sub-Assemblies",
+        "Component States and Configurations",
+        "Using COTS Parts",
+        "Tolerance vs Clearance",
+        "Gear ratios",
+      ],
+    },
+    {
+      heading: "Week 7",
+      subheading: "Programming and Git/GitHub",
+      objectives: [
+        "Importance of Git",
+        "Git Commands and VS Code Integration",
+        "Hardware Control with Documentation",
+      ],
+      milestone: "Assembly Review",
+    },
+    {
+      heading: "Week 8",
+      subheading: "Electronics and Soldering",
+      objectives: [
+        "Circuit Components and Terminology",
+        "Pulse Width Modulation",
+        "Microcontroller (MCU) vs Single-Board Controller (SBC)",
+        "Linux",
+        "Communication Protocols",
+        "Soldering, Crimping, and Multimeter usage",
+        "Documentation navigation",
+      ],
+    },
+    {
+      heading: "Week 9",
+      subheading: "Prototype Week",
+      objectives: ["Project work week"],
+      milestone: "Prototype Review",
+    },
+    {
+      heading: "Week 10",
+      subheading: "Build Week",
+      objectives: ["Project work week"],
+      milestone: "Build",
+    },
+  ];
 
   return (
     <div className="min-h-screen">
@@ -202,112 +342,23 @@ const Hatchling = () => {
               Hatchlings graduate from the program with a community, passion for
               engineering, and the following skills:
             </p>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="glass-card p-8 rounded-xl">
-                <h4 className="text-xl font-light text-accent mb-4">
-                  SolidWorks (CAD) Competency
-                </h4>
-                <ul className="space-y-3 text-gray-400 font-light">
-                  <li className="flex items-start">
-                    <span className="text-accent mr-3 mt-1">•</span>
-                    <span>Design custom parts and modify assemblies</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-accent mr-3 mt-1">•</span>
-                    <span>
-                      Reading and designing around manufacturing constraints
-                    </span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="glass-card p-8 rounded-xl">
-                <h4 className="text-xl font-light text-accent mb-4">
-                  Electronics
-                </h4>
-                <ul className="space-y-3 text-gray-400 font-light">
-                  <li className="flex items-start">
-                    <span className="text-accent mr-3 mt-1">•</span>
-                    <span>
-                      Evaluating hardware specifications and datasheets
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-accent mr-3 mt-1">•</span>
-                    <span>Circuit design and implementation</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="glass-card p-8 rounded-xl">
-                <h4 className="text-xl font-light text-accent mb-4">
-                  Programming
-                </h4>
-                <ul className="space-y-3 text-gray-400 font-light">
-                  <li className="flex items-start">
-                    <span className="text-accent mr-3 mt-1">•</span>
-                    <span>Utilize Git/GitHub</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-accent mr-3 mt-1">•</span>
-                    <span>Control hardware via a microcontroller</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-accent mr-3 mt-1">•</span>
-                    <span>Python and C++</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="glass-card p-8 rounded-xl">
-                <h4 className="text-xl font-light text-accent mb-4">
-                  Manufacturing
-                </h4>
-                <ul className="space-y-3 text-gray-400 font-light">
-                  <li className="flex items-start">
-                    <span className="text-accent mr-3 mt-1">•</span>
-                    <span>Soldering and Crimping</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-accent mr-3 mt-1">•</span>
-                    <span>Additive manufacturing</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="glass-card p-8 rounded-xl">
-                <h4 className="text-xl font-light text-accent mb-4">
-                  Problem Solving & Critical Thinking
-                </h4>
-                <ul className="space-y-3 text-gray-400 font-light">
-                  <li className="flex items-start">
-                    <span className="text-accent mr-3 mt-1">•</span>
-                    <span>
-                      Teams go through the design process from concept creation
-                      to testing
-                    </span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="glass-card p-8 rounded-xl">
-                <h4 className="text-xl font-light text-accent mb-4">
-                  Community & Passion
-                </h4>
-                <ul className="space-y-3 text-gray-400 font-light">
-                  <li className="flex items-start">
-                    <span className="text-accent mr-3 mt-1">•</span>
-                    <span>Build lasting connections with fellow engineers</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-accent mr-3 mt-1">•</span>
-                    <span>
-                      Develop passion for engineering through hands-on
-                      experience
-                    </span>
-                  </li>
-                </ul>
-              </div>
+              {learningObjectiveGroups.map((group) => (
+                <div className="glass-card p-8 rounded-xl">
+                  <h4 className="text-xl font-light text-accent mb-4">
+                    {group.groupName}
+                  </h4>
+                  <ul className="space-y-3 text-gray-400 font-light">
+                    {group.objecives.map((objective) => (
+                      <li className="flex items-start" key={objective}>
+                        <span className="text-accent mr-3 mt-1">•</span>
+                        <span>{objective}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -319,184 +370,26 @@ const Hatchling = () => {
             <div className="relative">
               {/* Scrollable Timeline Container */}
               <div className="flex gap-4 overflow-x-auto pb-6 custom-scrollbar">
-                {/* Week 1 */}
-                <div className="glass-card p-6 rounded-xl min-w-[280px] flex-shrink-0">
-                  <div className="text-2xl font-light text-accent mb-3">
-                    Week 1
+                {programScheduleItems.map((item) => (
+                  <div className="glass-card p-6 rounded-xl min-w-[280px] flex-shrink-0">
+                    <div className="text-2xl font-light text-accent mb-3">
+                      {item.heading}
+                    </div>
+                    <h4 className="text-lg font-light text-gray-200 mb-3">
+                      {item.subheading}
+                    </h4>
+                    <ul className="space-y-2 text-sm text-gray-400 font-light">
+                      {item.objectives.map((objective) => (
+                        <li>• {objective}</li>
+                      ))}
+                      {item.milestone ? (
+                        <li className="text-accent font-medium">
+                          • Project Milestone: {item.milestone}
+                        </li>
+                      ) : null}
+                    </ul>
                   </div>
-                  <h4 className="text-lg font-light text-gray-200 mb-3">
-                    Introductions
-                  </h4>
-                  <ul className="space-y-2 text-sm text-gray-400 font-light">
-                    <li>• Learn about Hatchling and learning objectives</li>
-                    <li>• Meet the Director team</li>
-                    <li>• Meet Hatchling Peers</li>
-                    <li>• Install software</li>
-                  </ul>
-                </div>
-
-                {/* Week 2 */}
-                <div className="glass-card p-6 rounded-xl min-w-[280px] flex-shrink-0">
-                  <div className="text-2xl font-light text-accent mb-3">
-                    Week 2
-                  </div>
-                  <h4 className="text-lg font-light text-gray-200 mb-3">
-                    SolidWorks (CAD) Foundation
-                  </h4>
-                  <ul className="space-y-2 text-sm text-gray-400 font-light">
-                    <li>• What is CAD?</li>
-                    <li>• Engineering Drawing navigation</li>
-                    <li>• Navigating SolidWorks</li>
-                    <li>• Introduce design intent</li>
-                  </ul>
-                </div>
-
-                {/* Week 3 */}
-                <div className="glass-card p-6 rounded-xl min-w-[280px] flex-shrink-0">
-                  <div className="text-2xl font-light text-accent mb-3">
-                    Week 3
-                  </div>
-                  <h4 className="text-lg font-light text-gray-200 mb-3">
-                    SolidWorks 3D
-                  </h4>
-                  <ul className="space-y-2 text-sm text-gray-400 font-light">
-                    <li>
-                      • SolidWorks big 3 features: extrude, revolve, and
-                      finishing operations
-                    </li>
-                    <li>• Origin selection and symmetry</li>
-                    <li>• Important tools</li>
-                  </ul>
-                </div>
-
-                {/* Week 4 */}
-                <div className="glass-card p-6 rounded-xl min-w-[280px] flex-shrink-0">
-                  <div className="text-2xl font-light text-accent mb-3">
-                    Week 4
-                  </div>
-                  <h4 className="text-lg font-light text-gray-200 mb-3">
-                    Tools, Project, and Process
-                  </h4>
-                  <ul className="space-y-2 text-sm text-gray-400 font-light">
-                    <li>• Design Process</li>
-                    <li>• Additive Manufacturing with best practices</li>
-                    <li>• Tool safety and usage</li>
-                    <li>• Available project resources</li>
-                    <li className="text-accent font-medium">
-                      • Project Milestone: Project Introduction
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Week 5 */}
-                <div className="glass-card p-6 rounded-xl min-w-[280px] flex-shrink-0">
-                  <div className="text-2xl font-light text-accent mb-3">
-                    Week 5
-                  </div>
-                  <h4 className="text-lg font-light text-gray-200 mb-3">
-                    Design Review and C++
-                  </h4>
-                  <ul className="space-y-2 text-sm text-gray-400 font-light">
-                    <li>
-                      • Syntax, variables, loops, if-else statements, and
-                      classes
-                    </li>
-                    <li>• Signal processing</li>
-                    <li>• Design review</li>
-                    <li className="text-accent font-medium">
-                      • Project Milestone: Design Review
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Week 6 */}
-                <div className="glass-card p-6 rounded-xl min-w-[280px] flex-shrink-0">
-                  <div className="text-2xl font-light text-accent mb-3">
-                    Week 6
-                  </div>
-                  <h4 className="text-lg font-light text-gray-200 mb-3">
-                    SolidWorks Assembly
-                  </h4>
-                  <ul className="space-y-2 text-sm text-gray-400 font-light">
-                    <li>• Mates</li>
-                    <li>• Sub-Assemblies</li>
-                    <li>• Component states and configurations</li>
-                    <li>• COTS usage</li>
-                    <li>• Tolerance vs Clearance</li>
-                    <li>• Gear ratios</li>
-                  </ul>
-                </div>
-
-                {/* Week 7 */}
-                <div className="glass-card p-6 rounded-xl min-w-[280px] flex-shrink-0">
-                  <div className="text-2xl font-light text-accent mb-3">
-                    Week 7
-                  </div>
-                  <h4 className="text-lg font-light text-gray-200 mb-3">
-                    Programming and Git/GitHub
-                  </h4>
-                  <ul className="space-y-2 text-sm text-gray-400 font-light">
-                    <li>• Importance of Git</li>
-                    <li>• Git commands and VSCODE integration</li>
-                    <li>• Documentation reading for hardware control</li>
-                    <li className="text-accent font-medium">
-                      • Project Milestone: Assembly Review
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Week 8 */}
-                <div className="glass-card p-6 rounded-xl min-w-[280px] flex-shrink-0">
-                  <div className="text-2xl font-light text-accent mb-3">
-                    Week 8
-                  </div>
-                  <h4 className="text-lg font-light text-gray-200 mb-3">
-                    Electronics and Soldering
-                  </h4>
-                  <ul className="space-y-2 text-sm text-gray-400 font-light">
-                    <li>• Circuit components and terminology</li>
-                    <li>• Pulse Width Modulation</li>
-                    <li>
-                      • Microcontroller (MCU) vs Single-Board Controller (SBC)
-                    </li>
-                    <li>• Linux</li>
-                    <li>• Communication Protocols</li>
-                    <li>• Soldering, Crimping and multimeter usage</li>
-                    <li>• Documentation navigation</li>
-                  </ul>
-                </div>
-
-                {/* Week 9 */}
-                <div className="glass-card p-6 rounded-xl min-w-[280px] flex-shrink-0">
-                  <div className="text-2xl font-light text-accent mb-3">
-                    Week 9
-                  </div>
-                  <h4 className="text-lg font-light text-gray-200 mb-3">
-                    Prototype Week
-                  </h4>
-                  <ul className="space-y-2 text-sm text-gray-400 font-light">
-                    <li>• Project work week</li>
-                    <li className="text-accent font-medium">
-                      • Project Milestone: Prototype Review
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Week 10 */}
-                <div className="glass-card p-6 rounded-xl min-w-[280px] flex-shrink-0">
-                  <div className="text-2xl font-light text-accent mb-3">
-                    Week 10
-                  </div>
-                  <h4 className="text-lg font-light text-gray-200 mb-3">
-                    Build Week
-                  </h4>
-                  <ul className="space-y-2 text-sm text-gray-400 font-light">
-                    <li>• Project work week</li>
-                    <li className="text-accent font-medium">
-                      • Project Milestone: Build
-                    </li>
-                  </ul>
-                </div>
+                ))}
               </div>
 
               {/* Scroll Indicator */}
