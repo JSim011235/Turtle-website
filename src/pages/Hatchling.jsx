@@ -413,19 +413,12 @@ const Hatchling = () => {
           {/* Weekly Content PDFs (toggleable) */}
           {slidesVisible && (
             <div className="mb-16">
-              <h3 className="text-3xl font-light text-gray-200 mb-8 text-center">
-                Weekly Content Materials
-              </h3>
               <div className="glass-card p-8 rounded-2xl max-w-2xl mx-auto">
                 <div className="text-center mb-6">
                   <div className="text-5xl mb-4">📚</div>
                   <h4 className="text-xl font-light text-gray-200 mb-2">
-                    Select Week to Download
+                    Slides
                   </h4>
-                  <p className="text-gray-400 font-light">
-                    Choose a week to download the corresponding content
-                    materials
-                  </p>
                 </div>
 
                 {(() => {
@@ -484,13 +477,6 @@ const Hatchling = () => {
                     </div>
                   );
                 })()}
-
-                <div className="text-center">
-                  <p className="text-sm text-gray-400">
-                    Available for weeks 1–8 • Each PDF contains comprehensive
-                    content for that week
-                  </p>
-                </div>
               </div>
             </div>
           )}
