@@ -44,6 +44,26 @@ const DevelopmentPrograms = () => {
       link: "/workshop-series",
       image: "/assets/Workshop_Photo.jpg",
     },
+    {
+      id: "software-incubator",
+      title: "Software Incubator",
+      tagline: "tag",
+      year: "Releasing Fall 2026",
+      description:
+        "Software Incubator is a sequel to Hatchling, focused on the robotic application of kinematics, sensor fusion, control theory, and more",
+      link: "/software-incubator",
+      image: "/assets/SI_Photo.JPG",
+    },
+    {
+      id: "mechanical-incubator",
+      title: "Mechanical Incubator",
+      tagline: "tag",
+      year: "Releasing Fall 2026",
+      description:
+        "Mechanical Incubator is a sequel to Hatchling, focused on the robotic application of Ansys FEA, DFMA, GD&T, Electromechanical Design, and more",
+      link: "/mechanical-incubator",
+      image: "/assets/MI_Photo.png",
+    },
   ];
 
   return (
@@ -93,7 +113,7 @@ const DevelopmentPrograms = () => {
           <div className="max-w-7xl mx-auto">
             {/* Section Title */}
             <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-12 text-gray-200">
-              {program.title.toUpperCase()}
+              {/* {program.title.toUpperCase()} */}
             </h2>
 
             {/* Large Glass Card */}
@@ -112,7 +132,8 @@ const DevelopmentPrograms = () => {
                   </p>
 
                   <h3 className="text-4xl md:text-5xl text-white mb-3">
-                    {program.tagline}
+                    {/* {program.tagline} */}
+                    {program.title.toUpperCase()}
                   </h3>
 
                   <p className="text-base md:text-lg font-light text-white/90 mb-6">

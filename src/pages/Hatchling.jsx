@@ -66,21 +66,21 @@ const Hatchling = () => {
   const learningObjectiveGroups = [
     {
       groupName: "SolidWorks (CAD) Competency",
-      objecives: [
+      objectives: [
         "ObjectDesign custom parts and modify assemblies",
         "Design around manufacturing constraints",
       ],
     },
     {
       groupName: "Electronics",
-      objecives: [
+      objectives: [
         "Evaluating hardware specifications and datasheets",
         "Circuit design and implementation",
       ],
     },
     {
       groupName: "Programming",
-      objecives: [
+      objectives: [
         "Utilize Git and GitHub",
         "Control hardware via a microcontroller",
         "Python and C++",
@@ -88,17 +88,17 @@ const Hatchling = () => {
     },
     {
       groupName: "Manufacturing",
-      objecives: ["Soldering and crimping", "Additive manufacturing"],
+      objectives: ["Soldering and crimping", "Additive manufacturing"],
     },
     {
       groupName: "Problem Solving and Critical Thinking",
-      objecives: [
+      objectives: [
         "Work in teams throughout a full design process from concept creation to testing",
       ],
     },
     {
       groupName: "Community & Passion",
-      objecives: [
+      objectives: [
         "Build lasting connections with fellow engineers",
         "Develop a passion for engineering through hands-on experience",
       ],
@@ -350,7 +350,7 @@ const Hatchling = () => {
                     {group.groupName}
                   </h4>
                   <ul className="space-y-3 text-gray-400 font-light">
-                    {group.objecives.map((objective) => (
+                    {group.objectives.map((objective) => (
                       <li className="flex items-start" key={objective}>
                         <span className="text-accent mr-3 mt-1">•</span>
                         <span>{objective}</span>
