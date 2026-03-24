@@ -111,7 +111,7 @@ const Hatchling = () => {
       subheading: "Introductions",
       objectives: [
         "Hatchling Overview",
-        "Meet the Director team and Peers",
+        "Meet the Director Team and Peers",
         "Install software",
       ],
     },
@@ -187,7 +187,7 @@ const Hatchling = () => {
         "Linux",
         "Communication Protocols",
         "Soldering, Crimping, and Multimeter usage",
-        "Documentation navigation",
+        "Documentation Navigation",
       ],
     },
     {
@@ -199,7 +199,7 @@ const Hatchling = () => {
     {
       heading: "Week 10",
       subheading: "Build Week",
-      objectives: ["Project work week"],
+      objectives: ["Project Work Week"],
       milestone: "Build",
     },
   ];
