@@ -35,16 +35,6 @@ const DevelopmentPrograms = () => {
       image: "/assets/hatchling_development.JPG",
     },
     {
-      id: "workshop-series",
-      title: "Workshop Series",
-      tagline: "Workshop Series",
-      year: "Coming Soon",
-      description:
-        "A platform for members to gain presentation experience and learn new technical and leadership skills",
-      link: "/workshop-series",
-      image: "/assets/Workshop_Photo.jpg",
-    },
-    {
       id: "software-incubator",
       title: "Software Incubator",
       tagline: "tag",
@@ -64,6 +54,17 @@ const DevelopmentPrograms = () => {
       link: "/mechanical-incubator",
       image: "/assets/MI_Photo.png",
     },
+    {
+      id: "workshop-series",
+      title: "Workshop Series",
+      tagline: "Workshop Series",
+      year: "Coming Soon",
+      description:
+        "A platform for members to gain presentation experience and learn new technical and leadership skills",
+      link: "/#",
+      image: "/assets/Workshop_Photo.jpg",
+      disabled: true,
+    },
   ];
 
   return (
@@ -72,15 +73,17 @@ const DevelopmentPrograms = () => {
       <div className="fixed top-20 left-0 right-0 z-40 bg-gray-900/90 backdrop-blur-xl border-b border-gray-700/50 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center gap-4 py-4">
-            {programs.map((program) => (
-              <button
-                key={program.id}
-                onClick={() => navigate(program.link)}
-                className="px-6 py-2 rounded-lg text-sm font-light tracking-wide transition-all duration-300 bg-gray-800/50 hover:bg-gray-700 text-gray-300 hover:text-yellow-400 border border-gray-700 hover:border-yellow-400/50"
-              >
-                {program.title}
-              </button>
-            ))}
+            {programs
+              .filter((program) => !program.disabled)
+              .map((program) => (
+                <button
+                  key={program.id}
+                  onClick={() => navigate(program.link)}
+                  className="px-6 py-2 rounded-lg text-sm font-light tracking-wide transition-all duration-300 bg-gray-800/50 hover:bg-gray-700 text-gray-300 hover:text-yellow-400 border border-gray-700 hover:border-yellow-400/50"
+                >
+                  {program.title}
+                </button>
+              ))}
           </div>
         </div>
       </div>
@@ -140,12 +143,14 @@ const DevelopmentPrograms = () => {
                     {program.description}
                   </p>
 
-                  <button
-                    onClick={() => navigate(program.link)}
-                    className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-light py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-xl"
-                  >
-                    Learn More
-                  </button>
+                  {!program.disabled && (
+                    <button
+                      onClick={() => navigate(program.link)}
+                      className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-light py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-xl"
+                    >
+                      Learn More
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
