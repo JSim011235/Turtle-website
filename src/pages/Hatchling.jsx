@@ -508,7 +508,7 @@ const Hatchling = () => {
               <h3 className="text-xl font-light text-gray-200 mb-6">
                 Project Tips & Controller Resources
               </h3>
-              <ButtonLink href="https://drive.google.com/drive/u/0/folders/1Rw4qrWXRxz9cDLFNZvCBoV22xy_KlB8y">
+              <ButtonLink to="https://drive.google.com/drive/u/0/folders/1Rw4qrWXRxz9cDLFNZvCBoV22xy_KlB8y">
                 Download Guide
               </ButtonLink>
             </div>
