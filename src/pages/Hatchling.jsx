@@ -488,13 +488,9 @@ const Hatchling = () => {
               <h3 className="text-xl font-light text-gray-200 mb-6">
                 Hatchling Syllabus
               </h3>
-              <a
-                href="/pdfs/Hatchling_Syllabus.pdf"
-                download
-                className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light  hover:scale-105 transition-all duration-300"
-              >
-                Download Notes
-              </a>
+              <ButtonLink to="/pdfs/Hatchling_Syllabus.pdf" reloadDocument>
+                Download Syllabus
+              </ButtonLink>
             </div>
 
             <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
@@ -502,13 +498,9 @@ const Hatchling = () => {
               <h3 className="text-xl font-light text-gray-200 mb-6">
                 CAD Examples
               </h3>
-              <a
-                href="/pdfs/Hatchling CAD Examples.zip"
-                download
-                className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light  hover:scale-105 transition-all duration-300"
-              >
+              <ButtonLink to="https://drive.google.com/drive/u/0/folders/1vNfWDbjknwccCOt5aOBdxUWnFxSLPm2S">
                 Download Examples
-              </a>
+              </ButtonLink>
             </div>
 
             <div className="glass-card p-8 rounded-2xl text-center transition-all duration-300">
@@ -516,13 +508,9 @@ const Hatchling = () => {
               <h3 className="text-xl font-light text-gray-200 mb-6">
                 Project Tips & Controller Resources
               </h3>
-              <a
-                href="/pdfs/controller-info-code.pdf"
-                download
-                className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg text-sm font-light hover:scale-105 transition-all duration-300"
-              >
+              <ButtonLink href="https://drive.google.com/drive/u/0/folders/1Rw4qrWXRxz9cDLFNZvCBoV22xy_KlB8y">
                 Download Guide
-              </a>
+              </ButtonLink>
             </div>
           </div>
         </div>

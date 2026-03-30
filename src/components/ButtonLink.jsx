@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 export default function ButtonLink({
   children,
   to,
+  reloadDocument,
   sizeVariant = "default",
   style = "primary",
   transparent = "true",
@@ -25,6 +26,7 @@ export default function ButtonLink({
   return (
     <Link
       to={to}
+      reloadDocument={reloadDocument}
       className={`${className} ${colorStyles[style]} ${sizeVariantStyles[sizeVariant]} inline-block font-medium hover:scale-105 transition-all duration-300`}
     >
       {children}
