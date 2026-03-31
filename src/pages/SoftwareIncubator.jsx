@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import ImageCarousel from "../components/ImageCarousel";
 import ButtonLink from "../components/ButtonLink";
+import TextLink from "../components/TextLink";
 
 const SoftwareIncubator = () => {
   const heroRef = useRef(null);
@@ -181,7 +182,7 @@ const SoftwareIncubator = () => {
         {/* Text only — no box */}
         <div className="relative text-center z-10 max-w-6xl mx-auto -translate-y-36">
           <h1 className="text-5xl md:text-7xl lg:text-8xl tracking-tight text-white drop-shadow-2xl">
-            <span className="block">MECHANICAL</span>
+            <span className="block">SOFTWARE</span>
             <span className="block">INCUBATOR</span>
             <span className="block text-accent">PROGRAM</span>
           </h1>
@@ -198,14 +199,18 @@ const SoftwareIncubator = () => {
       <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-20 text-gray-200">
-            OUR <span className="text-accent">MISSION</span>
+            PREVIEW <span className="text-accent">WORKSHOP</span>
           </h2>
 
           <div className="glass-card p-12 rounded-2xl text-center">
             <p className="text-xl md:text-2xl font-light text-gray-400 leading-relaxed max-w-4xl mx-auto">
-              Releasing in the fall of 2026, Software Incubator is a sequel to
-              Hatchling, focused on the robotic application of kinematics,
-              sensor fusion, control theory, and more
+              TURTLE is thrilled to announce the launch of our Mechanical and
+              Software Incubator. Building upon the success of the Hatchling
+              Development Program, Incubator will provide hands-on opportunities
+              to learn new technical and leadership skills. Join us at our
+              upcoming preview workshops and RSVP for free{" "}
+              <TextLink to="https://forms.gle/7VkJndrzrwp1askw7">here</TextLink>
+              .
             </p>
           </div>
         </div>
