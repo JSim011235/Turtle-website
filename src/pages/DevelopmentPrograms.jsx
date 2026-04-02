@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { gsap } from "gsap";
+import ButtonLink from "../components/ButtonLink";
 
 const DevelopmentPrograms = () => {
   const navigate = useNavigate();
@@ -144,12 +145,7 @@ const DevelopmentPrograms = () => {
                   </p>
 
                   {!program.disabled && (
-                    <button
-                      onClick={() => navigate(program.link)}
-                      className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-light py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-xl"
-                    >
-                      Learn More
-                    </button>
+                    <ButtonLink to={program.link}>Learn More</ButtonLink>
                   )}
                 </div>
               </div>
@@ -168,12 +164,9 @@ const DevelopmentPrograms = () => {
           <p className="text-xl font-light text-gray-400 mb-12 max-w-2xl mx-auto">
             Join TURTLE and gain the skills needed to excel in robotics
           </p>
-          <button
-            onClick={() => navigate("/apply")}
-            className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-light py-4 px-12 rounded-lg transition-all duration-300 hover:shadow-xl text-lg"
-          >
+          <ButtonLink sizeVariant="large" to="/apply">
             Apply Now
-          </button>
+          </ButtonLink>
         </div>
       </section>
     </div>
